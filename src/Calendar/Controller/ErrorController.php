@@ -3,11 +3,10 @@
 namespace Calendar\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpKernel\Exception\FlattenException;
 
 class ErrorController
 {
-    public function exceptionAction(FlattenException $exception)
+    public function exceptionAction($exception)
     {
         $msg = 'Something went wrong! ('.$exception->getMessage().')';
 
